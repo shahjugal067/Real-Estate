@@ -51,10 +51,10 @@ const  SignUp =()=> {
   return (
     <div className='p-3 max-w-lg mx-auto'>
      <Card color="transparent" shadow={false}>
-      <Typography variant="h4" color="blue-gray" className='mt-8 items-center justify-center'>
+      <Typography variant="h4" color="blue-gray" className='mt-8 animate-pulse text-green-600 text-center items-center justify-center'>
         Sign Up
       </Typography>
-      <Typography color="gray" className="mt-1 font-normal items-center justify-center">
+      <Typography  color="gray" className="mt-3 mb-8 animate-pulse text-blue-gray-400 font-normal text-center items-center justify-center">
          Enter your details to register.
       </Typography>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 ">

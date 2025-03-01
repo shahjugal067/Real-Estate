@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <div>
       <NavbarDark/>
+      <h1>heloo</h1>
     </div>
   )
 }

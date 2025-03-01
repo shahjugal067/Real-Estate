@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 import {
   Card,
@@ -56,40 +59,39 @@ const  SignUp =()=> {
       </Typography>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 ">
         <div className="mb-1 flex flex-col gap-6">
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
-            Your Name
-          </Typography>
+        <PersonOutlineIcon className='w-5 h-5 absolute text-center items-center mt-2 ml-3 text-yellow-800'/>
           <Input
             size="lg" type='text' name='username' id='username' onChange={handleChange} 
-            placeholder="name@mail.com"
-            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+            placeholder="Enter Name..."
+            className=" text-center !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
-            Your Email
-          </Typography>
+          
+         <div>
+         <MailOutlineIcon className='w-5 h-5 absolute text-center items-center mt-2 ml-3 text-yellow-800'/>
           <Input
             size="lg" type='email' name='email' id='email' onChange={handleChange}
             placeholder="name@mail.com"
-            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+            className="text-center !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
-            Password
-          </Typography>
+         </div>
+         <div>
+         <VisibilityIcon className='w-5 h-5 absolute text-center items-center mt-2 ml-3 text-yellow-800'/>
           <Input
             type="password" name='password' id='password' onChange={handleChange}
             size="lg"
             placeholder="Enter Password"
-            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+            className=" text-center !border-t-blue-gray-200 focus:!border-t-gray-900"
             labelProps={{
               className: "before:content-none after:content-none",
             }}
           />
+         </div>
         </div>
         <Checkbox
           label={

@@ -1,8 +1,12 @@
 import React from 'react'
+import { NavbarDark } from '../components/Header'
+
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <NavbarDark/>
+    </div>
   )
 }
 

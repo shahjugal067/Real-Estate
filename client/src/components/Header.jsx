@@ -8,8 +8,11 @@ import {
   } from "@material-tailwind/react";
   import { BellIcon, Cog6ToothIcon, SignalIcon, UserIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
    
   export function NavbarDark() {
+    const {currentUser} = useSelector((state) => state.user);
+
     return (
       <Navbar
         variant="gradient"
@@ -52,9 +55,17 @@ import { Link } from "react-router-dom";
                <Link to={'/about'}>
                <li className="hover:text-red-700 cursor-pointer hidden sm:inline">About</li>
                </Link> 
+
                <Link to={'/sign-in'} >
-               <li className="hover:text-green-900 cursor-pointer relative hover:scale-105 transition-all">
+               {currentUser ? (
+                <img src={currentUser.avatar} alt="profile" 
+                className='rounded-full h-7 w-7 object-cover' />
+               ) : (
+                <li className="hover:text-green-900 cursor-pointer relative hover:scale-105 transition-all">
                 <LoginIcon className="h-6 w-6 "/></li>
+               
+               )}
+               
                </Link>
                  
             </ul>

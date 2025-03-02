@@ -13,6 +13,7 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { singInStart,singInSuccess,singInFailure } from '../redux/user/userSlice';
+import OAuth from '../components/OAuth';
  
 const  SignIn =()=> {
 
@@ -103,6 +104,7 @@ const  SignIn =()=> {
         <Button disabled={loading} type='submit'  className="mt-6" fullWidth>
           {loading ? 'Loading...' : 'Sign In'}
         </Button>
+        <OAuth/>
         <Typography color="gray" className="mt-4 text-center font-normal">
           Dont have an account?{" "}
           <Link to={'/sign-up'} className="font-medium text-gray-900">

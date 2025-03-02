@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Link, useNavigate } from 'react-router-dom';
+import OAuth from '../components/OAuth';
  
 const  SignUp =()=> {
 
@@ -114,6 +115,7 @@ const  SignUp =()=> {
         <Button disabled={loading} type='submit'  className="mt-6" fullWidth>
           {loading ? 'Loading...' : 'Sign Up'}
         </Button>
+        <OAuth/>
         <Typography color="gray" className="mt-4 text-center font-normal">
           Already have an account?{" "}
           <Link to={'/sign-in'} className="font-medium text-gray-900">
